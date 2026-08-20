@@ -1,0 +1,752 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "admin",
+      "password_hash": "$2b$10$YtxvABtqYvFrd.1OsjiRh.un/ETA4l0SWMU6Ga60bxFKVi5I8ieli",
+      "full_name": "Александр Волков (Главный Администратор)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-06-21T10:51:12.221Z",
+      "last_login_at": "2026-08-20T10:51:12.222Z"
+    },
+    {
+      "id": 2,
+      "login": "manager",
+      "password_hash": "$2b$10$bjTXxx6.UnTQFjv9TKPFyeNktzfyc5ofC8I2C/ptPnSCjMNASJSiK",
+      "full_name": "Екатерина Романова (Старший Менеджер)",
+      "role": "manager",
+      "is_active": true,
+      "created_by": 1,
+      "created_at": "2026-07-06T10:51:12.302Z",
+      "last_login_at": "2026-08-20T10:51:12.302Z"
+    },
+    {
+      "id": 3,
+      "login": "client_booking",
+      "password_hash": "$2b$10$1n5FkJcZTTiCsZE7MNsm3OV285wN/55PmFS7RfQSeYxzSy7AFpzpm",
+      "full_name": "ООО «ОтельСофт Инновации»",
+      "role": "client",
+      "is_active": true,
+      "created_by": 2,
+      "created_at": "2026-07-21T10:51:12.382Z",
+      "last_login_at": "2026-08-20T10:51:12.382Z"
+    },
+    {
+      "id": 4,
+      "login": "client_travel",
+      "password_hash": "$2b$10$D5nYEcQJfJaIrH3T6gWJyO0qwHjlS/8VEBEzbq1AIX/.yRf086xQG",
+      "full_name": "TravelTech Global Europe Ltd.",
+      "role": "client",
+      "is_active": true,
+      "created_by": 2,
+      "created_at": "2026-08-05T10:51:12.459Z",
+      "last_login_at": "2026-08-20T10:51:12.459Z"
+    },
+    {
+      "id": 5,
+      "login": "test_hotel_owner",
+      "password_hash": "$2b$10$tr65z27aSzFVc6h3xYS3/.hemc31QjWYC3NZxGJmrxRoo5PmUJYh.",
+      "full_name": "???? ?????? (Grand Hotel Resort)",
+      "role": "client",
+      "is_active": true,
+      "created_at": "2026-08-20T10:51:17.279Z",
+      "last_login_at": "2026-08-20T10:51:17.433Z"
+    },
+    {
+      "id": 6,
+      "login": "bogdan",
+      "password_hash": "$2b$10$6FhQy6RyDTuyE/./2zQWaOYs5hE/3PaPKBKxLEl8pB/ppCOrAzRcG",
+      "full_name": "Администратор (bogdan)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-20T10:56:39.071Z",
+      "last_login_at": "2026-08-20T10:56:39.074Z"
+    },
+    {
+      "id": 7,
+      "login": "super_admin_2026",
+      "password_hash": "$2b$10$152ad3TmAdw00.Vtk4KAFu9JEE2cEnNq/8hBQEyeZTRy4xtMblxnq",
+      "full_name": "Администратор (super_admin_2026)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-20T10:56:39.226Z",
+      "last_login_at": "2026-08-20T10:56:39.229Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "owner_user_id": 3,
+      "name": "Отельные PMS и облачные системы EU/US",
+      "description": "Поиск и скоринг всех SaaS решений Property Management Systems для независимых и бутик-отелей.",
+      "is_archived": false,
+      "created_at": "2026-07-23T10:51:12.459Z"
+    },
+    {
+      "id": 2,
+      "owner_user_id": 3,
+      "name": "Channel Managers & Booking Engines 2026",
+      "description": "Синхронизаторы каналов, модули прямого бронирования и интеграции с метапоисковиками.",
+      "is_archived": false,
+      "created_at": "2026-07-31T10:51:12.459Z"
+    },
+    {
+      "id": 3,
+      "owner_user_id": 4,
+      "name": "Global Hospitality Tech & RMS",
+      "description": "Системы динамического ценообразования и управления доходами отелей.",
+      "is_archived": false,
+      "created_at": "2026-08-06T10:51:12.459Z"
+    },
+    {
+      "id": 4,
+      "owner_user_id": 5,
+      "name": "Основной проект (test_hotel_owner)",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-20T10:51:17.279Z"
+    },
+    {
+      "id": 1,
+      "owner_user_id": 6,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-20T10:56:39.071Z"
+    },
+    {
+      "id": 2,
+      "owner_user_id": 7,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-20T10:56:39.226Z"
+    }
+  ],
+  "queries": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "owner_user_id": 3,
+      "text_orig": "best hotel pms software cloud",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "fr",
+        "es"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "owner_user_id": 3,
+      "text_orig": "boutique hotel property management system",
+      "regions": [
+        "us",
+        "gb",
+        "it",
+        "ch"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 3,
+      "project_id": 1,
+      "owner_user_id": 3,
+      "text_orig": "cloud hospitality management platform",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 4,
+      "project_id": 1,
+      "owner_user_id": 3,
+      "text_orig": "hotel front desk automation software",
+      "regions": [
+        "us",
+        "de",
+        "nl"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 5,
+      "project_id": 1,
+      "owner_user_id": 3,
+      "text_orig": "hotel self check-in kiosk system mobile",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "jp"
+      ],
+      "status": "paused",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 6,
+      "project_id": 2,
+      "owner_user_id": 3,
+      "text_orig": "hotel channel manager api direct booking",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es",
+        "it"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 7,
+      "project_id": 2,
+      "owner_user_id": 3,
+      "text_orig": "vacation rental channel manager otas",
+      "regions": [
+        "us",
+        "fr",
+        "es",
+        "pt"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 8,
+      "project_id": 2,
+      "owner_user_id": 3,
+      "text_orig": "hotel booking engine stripe integration",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "nl"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 9,
+      "project_id": 2,
+      "owner_user_id": 3,
+      "text_orig": "direct hotel reservations widget saas",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_by": 3,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 10,
+      "project_id": 3,
+      "owner_user_id": 4,
+      "text_orig": "hotel revenue management system rms dynamic pricing",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "fr"
+      ],
+      "status": "active",
+      "created_by": 4,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 11,
+      "project_id": 3,
+      "owner_user_id": 4,
+      "text_orig": "hotel rate shopper parity monitoring tool",
+      "regions": [
+        "us",
+        "gb",
+        "it",
+        "es"
+      ],
+      "status": "active",
+      "created_by": 4,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 12,
+      "project_id": 3,
+      "owner_user_id": 4,
+      "text_orig": "hospitality yield management software ai",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "paused",
+      "created_by": 4,
+      "created_at": "2026-08-10T10:51:12.459Z",
+      "first_seen_at": "2026-08-11T10:51:12.459Z",
+      "last_seen_at": "2026-08-20T10:50:42.459Z"
+    },
+    {
+      "id": 13,
+      "project_id": 4,
+      "owner_user_id": 5,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-20T10:51:17.279Z",
+      "first_seen_at": "2026-08-20T10:51:17.279Z",
+      "last_seen_at": "2026-08-20T10:51:17.279Z"
+    },
+    {
+      "id": 14,
+      "project_id": 4,
+      "owner_user_id": 5,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-20T10:51:17.279Z",
+      "first_seen_at": "2026-08-20T10:51:17.279Z",
+      "last_seen_at": "2026-08-20T10:51:17.279Z"
+    },
+    {
+      "id": 1,
+      "project_id": 1,
+      "owner_user_id": 6,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-20T10:56:39.071Z",
+      "first_seen_at": "2026-08-20T10:56:39.071Z",
+      "last_seen_at": "2026-08-20T10:56:39.071Z"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "owner_user_id": 6,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-20T10:56:39.071Z",
+      "first_seen_at": "2026-08-20T10:56:39.071Z",
+      "last_seen_at": "2026-08-20T10:56:39.071Z"
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "owner_user_id": 7,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-20T10:56:39.226Z",
+      "first_seen_at": "2026-08-20T10:56:39.226Z",
+      "last_seen_at": "2026-08-20T10:56:39.226Z"
+    },
+    {
+      "id": 4,
+      "project_id": 2,
+      "owner_user_id": 7,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-20T10:56:39.226Z",
+      "first_seen_at": "2026-08-20T10:56:39.226Z",
+      "last_seen_at": "2026-08-20T10:56:39.226Z"
+    }
+  ],
+  "userSettings": [
+    [
+      1,
+      {
+        "user_id": 1,
+        "score_threshold": 7,
+        "updated_at": "2026-08-20T10:51:12.459Z"
+      }
+    ],
+    [
+      2,
+      {
+        "user_id": 2,
+        "score_threshold": 7,
+        "updated_at": "2026-08-20T10:51:12.459Z"
+      }
+    ],
+    [
+      3,
+      {
+        "user_id": 3,
+        "score_threshold": 7,
+        "updated_at": "2026-08-20T10:51:12.459Z"
+      }
+    ],
+    [
+      4,
+      {
+        "user_id": 4,
+        "score_threshold": 8,
+        "updated_at": "2026-08-20T10:51:12.459Z"
+      }
+    ],
+    [
+      5,
+      {
+        "user_id": 5,
+        "score_threshold": 7,
+        "updated_at": "2026-08-20T10:51:17.279Z"
+      }
+    ],
+    [
+      6,
+      {
+        "user_id": 6,
+        "score_threshold": 7,
+        "updated_at": "2026-08-20T10:56:39.071Z"
+      }
+    ],
+    [
+      7,
+      {
+        "user_id": 7,
+        "score_threshold": 7,
+        "updated_at": "2026-08-20T10:56:39.226Z"
+      }
+    ]
+  ],
+  "budgets": [
+    [
+      3,
+      {
+        "user_id": 3,
+        "raw_limit": 200000,
+        "llm_limit": 150000,
+        "raw_used": 128403,
+        "llm_used": 91303,
+        "updated_at": "2026-08-20T10:51:17.029Z"
+      }
+    ],
+    [
+      4,
+      {
+        "user_id": 4,
+        "raw_limit": 50000,
+        "llm_limit": 40000,
+        "raw_used": 41500,
+        "llm_used": 38200,
+        "updated_at": "2026-08-20T10:51:12.459Z"
+      }
+    ],
+    [
+      5,
+      {
+        "user_id": 5,
+        "raw_limit": 150000,
+        "llm_limit": 100000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-20T10:51:17.279Z"
+      }
+    ],
+    [
+      6,
+      {
+        "user_id": 6,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-20T10:56:39.071Z"
+      }
+    ],
+    [
+      7,
+      {
+        "user_id": 7,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-20T10:56:39.226Z"
+      }
+    ]
+  ],
+  "budgetLedger": [
+    {
+      "id": 1,
+      "user_id": 3,
+      "delta_raw": 200000,
+      "delta_llm": 150000,
+      "reason": "topup",
+      "actor_id": 1,
+      "actor_name": "admin",
+      "created_at": "2026-07-26T10:51:12.459Z"
+    },
+    {
+      "id": 2,
+      "user_id": 4,
+      "delta_raw": 50000,
+      "delta_llm": 40000,
+      "reason": "topup",
+      "actor_id": 1,
+      "actor_name": "admin",
+      "created_at": "2026-08-06T10:51:12.459Z"
+    },
+    {
+      "id": 3,
+      "user_id": 5,
+      "delta_raw": 150000,
+      "delta_llm": 100000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-20T10:51:17.279Z"
+    },
+    {
+      "id": 1,
+      "user_id": 6,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-20T10:56:39.071Z"
+    },
+    {
+      "id": 2,
+      "user_id": 7,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-20T10:56:39.226Z"
+    }
+  ],
+  "promptProfiles": [
+    {
+      "id": 1,
+      "owner_user_id": null,
+      "stage": 1,
+      "blocks": {
+        "target_description": "Программное обеспечение B2B для отелей, хостелов, апарт-отелей и сетей: PMS (Property Management System), Channel Managers для синхронизации OTA, модули прямого бронирования (Booking Engine), системы динамического ценообразования (RMS), киоски и софт самозаселения.",
+        "exclusions": "Потребительские сайты бронирования (Booking.com, Airbnb, Expedia), блоги туристов, каталоги туров, сайты отдельных отелей без SaaS-платформы, агентства веб-дизайна, сервисы аренды автомобилей.",
+        "categories": [
+          "PMS",
+          "Channel Manager",
+          "Booking Engine",
+          "RMS",
+          "OTA",
+          "Unrelated"
+        ],
+        "reference_sites": [
+          {
+            "domain": "cloudbeds.com",
+            "description": "Эталонный облачный PMS + Channel Manager"
+          },
+          {
+            "domain": "mews.com",
+            "description": "Современная cloud-native PMS для сетевых отелей"
+          },
+          {
+            "domain": "siteminder.com",
+            "description": "Мировой лидер среди Channel Manager решений"
+          },
+          {
+            "domain": "stayntouch.com",
+            "description": "Мобильная PMS и киоски самозаселения"
+          },
+          {
+            "domain": "guesty.com",
+            "description": "Платформа управления краткосрочной арендой"
+          }
+        ]
+      },
+      "version": 3,
+      "updated_by": 1,
+      "updated_at": "2026-08-15T10:51:12.459Z"
+    },
+    {
+      "id": 2,
+      "owner_user_id": null,
+      "stage": 2,
+      "blocks": {
+        "target_description": "Программное обеспечение B2B для отелей, хостелов, апарт-отелей и сетей: PMS (Property Management System), Channel Managers для синхронизации OTA, модули прямого бронирования (Booking Engine), системы динамического ценообразования (RMS), киоски и софт самозаселения.",
+        "exclusions": "Потребительские сайты бронирования (Booking.com, Airbnb, Expedia), блоги туристов, каталоги туров, сайты отдельных отелей без SaaS-платформы, агентства веб-дизайна, сервисы аренды автомобилей.",
+        "categories": [
+          "PMS",
+          "Channel Manager",
+          "Booking Engine",
+          "RMS",
+          "OTA",
+          "Unrelated"
+        ],
+        "reference_sites": [
+          {
+            "domain": "cloudbeds.com",
+            "description": "Эталонный облачный PMS + Channel Manager"
+          },
+          {
+            "domain": "mews.com",
+            "description": "Современная cloud-native PMS для сетевых отелей"
+          },
+          {
+            "domain": "siteminder.com",
+            "description": "Мировой лидер среди Channel Manager решений"
+          },
+          {
+            "domain": "stayntouch.com",
+            "description": "Мобильная PMS и киоски самозаселения"
+          },
+          {
+            "domain": "guesty.com",
+            "description": "Платформа управления краткосрочной арендой"
+          }
+        ]
+      },
+      "version": 5,
+      "updated_by": 1,
+      "updated_at": "2026-08-18T10:51:12.459Z"
+    }
+  ],
+  "promptHistory": [],
+  "auditLogs": [
+    {
+      "id": 4,
+      "actor_id": 7,
+      "actor_name": "super_admin_2026",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "7",
+      "payload": {
+        "login": "super_admin_2026",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-20T10:56:39.230Z"
+    },
+    {
+      "id": 3,
+      "actor_id": 7,
+      "actor_name": "super_admin_2026",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "7",
+      "payload": {
+        "login": "super_admin_2026",
+        "role": "admin",
+        "full_name": "Администратор (super_admin_2026)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-20T10:56:39.226Z"
+    },
+    {
+      "id": 2,
+      "actor_id": 6,
+      "actor_name": "bogdan",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "6",
+      "payload": {
+        "login": "bogdan",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-20T10:56:39.075Z"
+    },
+    {
+      "id": 1,
+      "actor_id": 6,
+      "actor_name": "bogdan",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "6",
+      "payload": {
+        "login": "bogdan",
+        "role": "admin",
+        "full_name": "Администратор (bogdan)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-20T10:56:39.071Z"
+    },
+    {
+      "id": 2,
+      "actor_id": 5,
+      "actor_name": "test_hotel_owner",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "5",
+      "payload": {
+        "login": "test_hotel_owner",
+        "role": "client"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-20T10:51:17.435Z"
+    },
+    {
+      "id": 1,
+      "actor_id": 5,
+      "actor_name": "test_hotel_owner",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "5",
+      "payload": {
+        "login": "test_hotel_owner",
+        "role": "client",
+        "full_name": "???? ?????? (Grand Hotel Resort)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-20T10:51:17.279Z"
+    }
+  ]
+}
