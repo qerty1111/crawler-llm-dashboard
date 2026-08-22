@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, cn } from '../ui';
 import { Sparkline } from './Sparkline';
 import { KpiTileData, KpiResponse } from '../../types';
@@ -10,6 +10,7 @@ interface KpiTileProps {
 }
 
 export const KpiTile: React.FC<KpiTileProps> = ({ data, colorVariant = 'blue' }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const isUp = data.deltaDirection === 'up';
   const isDown = data.deltaDirection === 'down';
 
@@ -40,11 +41,17 @@ export const KpiTile: React.FC<KpiTileProps> = ({ data, colorVariant = 'blue' })
         <span className="text-xs font-semibold text-slate-400 leading-tight group-hover:text-slate-200 transition-colors">
           {data.title}
         </span>
-        <div className="relative group/tooltip">
+        <div
+          className="relative"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <Info className="w-3.5 h-3.5 text-slate-500 hover:text-slate-200 cursor-help transition-colors" />
-          <div className="absolute right-0 top-full mt-1.5 hidden group-hover/tooltip:block w-56 p-2.5 bg-slate-900/95 backdrop-blur-md border border-slate-700/90 rounded-xl text-[11px] leading-relaxed text-slate-200 shadow-2xl z-50 pointer-events-none">
-            {data.tooltip}
-          </div>
+          {isHovered && (
+            <div className="absolute right-0 top-full mt-1.5 w-56 p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-[11px] leading-relaxed text-slate-200 shadow-2xl z-50 pointer-events-none">
+              {data.tooltip}
+            </div>
+          )}
         </div>
       </div>
 
