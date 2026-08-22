@@ -8,7 +8,7 @@
       "role": "admin",
       "is_active": true,
       "created_at": "2026-06-21T10:51:12.221Z",
-      "last_login_at": "2026-08-20T10:51:12.222Z"
+      "last_login_at": "2026-08-22T11:41:05.076Z"
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "is_active": true,
       "created_by": 1,
       "created_at": "2026-07-06T10:51:12.302Z",
-      "last_login_at": "2026-08-20T10:51:12.302Z"
+      "last_login_at": "2026-08-22T11:40:58.648Z"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "is_active": true,
       "created_by": 2,
       "created_at": "2026-07-21T10:51:12.382Z",
-      "last_login_at": "2026-08-20T10:51:12.382Z"
+      "last_login_at": "2026-08-22T11:41:01.632Z"
     },
     {
       "id": 4,
@@ -72,6 +72,56 @@
       "is_active": true,
       "created_at": "2026-08-20T10:56:39.226Z",
       "last_login_at": "2026-08-20T10:56:39.229Z"
+    },
+    {
+      "id": 8,
+      "login": "ироаипрву",
+      "password_hash": "$2b$10$lkMSjOZH1HEdaIsRoeaPs.mcs6G/hRtQUgf.N.HvVEmHBmCduB4RO",
+      "full_name": "Администратор (ироаипрву)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-21T20:49:38.095Z",
+      "last_login_at": "2026-08-21T20:49:38.114Z"
+    },
+    {
+      "id": 9,
+      "login": "цы",
+      "password_hash": "$2b$10$Mc8jPxEkzKX.VBrOk1./YuSTcu./HuKBvM939BLjV.mDpJ7RgV5RS",
+      "full_name": "Администратор (цы)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-21T21:52:30.031Z",
+      "last_login_at": "2026-08-21T21:52:30.040Z"
+    },
+    {
+      "id": 10,
+      "login": "щ",
+      "password_hash": "$2b$10$4HagJYqdzBz9xu6bzF8uIet9ivH7/qTzRJn9UNsRuHLQDVzf3OwYW",
+      "full_name": "Администратор (щ)",
+      "role": "admin",
+      "is_active": false,
+      "created_at": "2026-08-22T09:53:35.107Z",
+      "last_login_at": "2026-08-22T09:53:35.111Z"
+    },
+    {
+      "id": 11,
+      "login": "к",
+      "password_hash": "$2b$10$VN8HiTunbfdvXG4q4PNhWeRn7JQyr1x0qIfet9THgRJZ.iIuUxlZ.",
+      "full_name": "Администратор (к)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-22T11:22:49.059Z",
+      "last_login_at": "2026-08-22T11:22:49.145Z"
+    },
+    {
+      "id": 12,
+      "login": "у",
+      "password_hash": "$2b$10$9TCU6CuOduhO85Gvxul0F.9dKIKiEvShMB09T342kpBpMtfD.BvEO",
+      "full_name": "Администратор (у)",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-22T11:40:39.741Z",
+      "last_login_at": "2026-08-22T11:49:58.821Z"
     }
   ],
   "projects": [
@@ -122,6 +172,46 @@
       "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
       "is_archived": false,
       "created_at": "2026-08-20T10:56:39.226Z"
+    },
+    {
+      "id": 1,
+      "owner_user_id": 8,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-21T20:49:38.097Z"
+    },
+    {
+      "id": 2,
+      "owner_user_id": 9,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-21T21:52:30.031Z"
+    },
+    {
+      "id": 3,
+      "owner_user_id": 10,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-22T09:53:35.107Z"
+    },
+    {
+      "id": 4,
+      "owner_user_id": 11,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-22T11:22:49.081Z"
+    },
+    {
+      "id": 5,
+      "owner_user_id": 12,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-22T11:40:39.741Z"
     }
   ],
   "queries": [
@@ -407,6 +497,151 @@
       "created_at": "2026-08-20T10:56:39.226Z",
       "first_seen_at": "2026-08-20T10:56:39.226Z",
       "last_seen_at": "2026-08-20T10:56:39.226Z"
+    },
+    {
+      "id": 1,
+      "project_id": 1,
+      "owner_user_id": 8,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-21T20:49:38.099Z",
+      "first_seen_at": "2026-08-21T20:49:38.099Z",
+      "last_seen_at": "2026-08-21T20:49:38.099Z"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "owner_user_id": 8,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-21T20:49:38.099Z",
+      "first_seen_at": "2026-08-21T20:49:38.099Z",
+      "last_seen_at": "2026-08-21T20:49:38.099Z"
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "owner_user_id": 9,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-21T21:52:30.032Z",
+      "first_seen_at": "2026-08-21T21:52:30.032Z",
+      "last_seen_at": "2026-08-21T21:52:30.032Z"
+    },
+    {
+      "id": 4,
+      "project_id": 2,
+      "owner_user_id": 9,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-21T21:52:30.032Z",
+      "first_seen_at": "2026-08-21T21:52:30.032Z",
+      "last_seen_at": "2026-08-21T21:52:30.032Z"
+    },
+    {
+      "id": 5,
+      "project_id": 3,
+      "owner_user_id": 10,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T09:53:35.107Z",
+      "first_seen_at": "2026-08-22T09:53:35.107Z",
+      "last_seen_at": "2026-08-22T09:53:35.107Z"
+    },
+    {
+      "id": 6,
+      "project_id": 3,
+      "owner_user_id": 10,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T09:53:35.107Z",
+      "first_seen_at": "2026-08-22T09:53:35.107Z",
+      "last_seen_at": "2026-08-22T09:53:35.107Z"
+    },
+    {
+      "id": 7,
+      "project_id": 4,
+      "owner_user_id": 11,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T11:22:49.082Z",
+      "first_seen_at": "2026-08-22T11:22:49.082Z",
+      "last_seen_at": "2026-08-22T11:22:49.082Z"
+    },
+    {
+      "id": 8,
+      "project_id": 4,
+      "owner_user_id": 11,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T11:22:49.082Z",
+      "first_seen_at": "2026-08-22T11:22:49.082Z",
+      "last_seen_at": "2026-08-22T11:22:49.082Z"
+    },
+    {
+      "id": 9,
+      "project_id": 5,
+      "owner_user_id": 12,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T11:40:39.742Z",
+      "first_seen_at": "2026-08-22T11:40:39.742Z",
+      "last_seen_at": "2026-08-22T11:40:39.742Z"
+    },
+    {
+      "id": 10,
+      "project_id": 5,
+      "owner_user_id": 12,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T11:40:39.742Z",
+      "first_seen_at": "2026-08-22T11:40:39.742Z",
+      "last_seen_at": "2026-08-22T11:40:39.742Z"
     }
   ],
   "userSettings": [
@@ -423,7 +658,7 @@
       {
         "user_id": 2,
         "score_threshold": 7,
-        "updated_at": "2026-08-20T10:51:12.459Z"
+        "updated_at": "2026-08-22T09:52:47.173Z"
       }
     ],
     [
@@ -465,6 +700,46 @@
         "score_threshold": 7,
         "updated_at": "2026-08-20T10:56:39.226Z"
       }
+    ],
+    [
+      8,
+      {
+        "user_id": 8,
+        "score_threshold": 7,
+        "updated_at": "2026-08-21T20:49:38.096Z"
+      }
+    ],
+    [
+      9,
+      {
+        "user_id": 9,
+        "score_threshold": 7,
+        "updated_at": "2026-08-21T21:52:30.031Z"
+      }
+    ],
+    [
+      10,
+      {
+        "user_id": 10,
+        "score_threshold": 7,
+        "updated_at": "2026-08-22T09:53:35.107Z"
+      }
+    ],
+    [
+      11,
+      {
+        "user_id": 11,
+        "score_threshold": 7,
+        "updated_at": "2026-08-22T11:22:49.075Z"
+      }
+    ],
+    [
+      12,
+      {
+        "user_id": 12,
+        "score_threshold": 7,
+        "updated_at": "2026-08-22T11:40:39.741Z"
+      }
     ]
   ],
   "budgets": [
@@ -474,9 +749,9 @@
         "user_id": 3,
         "raw_limit": 200000,
         "llm_limit": 150000,
-        "raw_used": 128403,
-        "llm_used": 91303,
-        "updated_at": "2026-08-20T10:51:17.029Z"
+        "raw_used": 134371,
+        "llm_used": 97271,
+        "updated_at": "2026-08-22T11:49:58.120Z"
       }
     ],
     [
@@ -521,6 +796,61 @@
         "raw_used": 0,
         "llm_used": 0,
         "updated_at": "2026-08-20T10:56:39.226Z"
+      }
+    ],
+    [
+      8,
+      {
+        "user_id": 8,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-21T20:49:38.096Z"
+      }
+    ],
+    [
+      9,
+      {
+        "user_id": 9,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-21T21:52:30.031Z"
+      }
+    ],
+    [
+      10,
+      {
+        "user_id": 10,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-22T09:53:35.107Z"
+      }
+    ],
+    [
+      11,
+      {
+        "user_id": 11,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-22T11:22:49.077Z"
+      }
+    ],
+    [
+      12,
+      {
+        "user_id": 12,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-22T11:40:39.741Z"
       }
     ]
   ],
@@ -571,6 +901,51 @@
       "reason": "topup",
       "actor_name": "система регистрации",
       "created_at": "2026-08-20T10:56:39.226Z"
+    },
+    {
+      "id": 1,
+      "user_id": 8,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-21T20:49:38.096Z"
+    },
+    {
+      "id": 2,
+      "user_id": 9,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-21T21:52:30.031Z"
+    },
+    {
+      "id": 3,
+      "user_id": 10,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-22T09:53:35.107Z"
+    },
+    {
+      "id": 4,
+      "user_id": 11,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-22T11:22:49.080Z"
+    },
+    {
+      "id": 5,
+      "user_id": 12,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-22T11:40:39.741Z"
     }
   ],
   "promptProfiles": [
@@ -661,6 +1036,878 @@
   ],
   "promptHistory": [],
   "auditLogs": [
+    {
+      "id": 1,
+      "actor_id": 12,
+      "actor_name": "у",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "12",
+      "payload": {
+        "login": "у",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:49:58.827Z"
+    },
+    {
+      "id": 61,
+      "actor_id": 1,
+      "actor_name": "admin",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "1",
+      "payload": {
+        "login": "admin",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:41:05.078Z"
+    },
+    {
+      "id": 60,
+      "actor_id": 3,
+      "actor_name": "client_booking",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "3",
+      "payload": {
+        "login": "client_booking",
+        "role": "client"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:41:01.635Z"
+    },
+    {
+      "id": 59,
+      "actor_id": 1,
+      "actor_name": "admin",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "1",
+      "payload": {
+        "login": "admin",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:40:59.914Z"
+    },
+    {
+      "id": 58,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "2",
+      "payload": {
+        "login": "manager",
+        "role": "manager"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:40:58.650Z"
+    },
+    {
+      "id": 57,
+      "actor_id": 3,
+      "actor_name": "client_booking",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "3",
+      "payload": {
+        "login": "client_booking",
+        "role": "client"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:40:56.863Z"
+    },
+    {
+      "id": 56,
+      "actor_id": 12,
+      "actor_name": "у",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "12",
+      "payload": {
+        "login": "у",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:40:39.757Z"
+    },
+    {
+      "id": 55,
+      "actor_id": 12,
+      "actor_name": "у",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "12",
+      "payload": {
+        "login": "у",
+        "role": "admin",
+        "full_name": "Администратор (у)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:40:39.742Z"
+    },
+    {
+      "id": 54,
+      "actor_id": 11,
+      "actor_name": "к",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "11",
+      "payload": {
+        "login": "к",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:22:49.204Z"
+    },
+    {
+      "id": 53,
+      "actor_id": 11,
+      "actor_name": "к",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "11",
+      "payload": {
+        "login": "к",
+        "role": "admin",
+        "full_name": "Администратор (к)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T11:22:49.085Z"
+    },
+    {
+      "id": 52,
+      "actor_id": 10,
+      "actor_name": "щ",
+      "action": "update_user",
+      "entity": "user",
+      "entity_id": "10",
+      "payload": {
+        "is_active": false
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:54:28.521Z"
+    },
+    {
+      "id": 51,
+      "actor_id": 10,
+      "actor_name": "щ",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "10",
+      "payload": {
+        "login": "щ",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:53:35.114Z"
+    },
+    {
+      "id": 50,
+      "actor_id": 10,
+      "actor_name": "щ",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "10",
+      "payload": {
+        "login": "щ",
+        "role": "admin",
+        "full_name": "Администратор (щ)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:53:35.107Z"
+    },
+    {
+      "id": 49,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 6,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:47.173Z"
+    },
+    {
+      "id": 48,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 6
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:47.027Z"
+    },
+    {
+      "id": 47,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:46.578Z"
+    },
+    {
+      "id": 46,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 6,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:46.472Z"
+    },
+    {
+      "id": 45,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 6
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:46.401Z"
+    },
+    {
+      "id": 44,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:45.309Z"
+    },
+    {
+      "id": 43,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:44.745Z"
+    },
+    {
+      "id": 42,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 6,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:44.676Z"
+    },
+    {
+      "id": 41,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 6
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:42.742Z"
+    },
+    {
+      "id": 40,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 6,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:42.472Z"
+    },
+    {
+      "id": 39,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 6
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:42.409Z"
+    },
+    {
+      "id": 38,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:42.226Z"
+    },
+    {
+      "id": 37,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 6,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:42.143Z"
+    },
+    {
+      "id": 36,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 6
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:42.075Z"
+    },
+    {
+      "id": 35,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 6,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:40.873Z"
+    },
+    {
+      "id": 34,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 6
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:40.812Z"
+    },
+    {
+      "id": 33,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:40.469Z"
+    },
+    {
+      "id": 32,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:40.405Z"
+    },
+    {
+      "id": 31,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:40.116Z"
+    },
+    {
+      "id": 30,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:40.043Z"
+    },
+    {
+      "id": 29,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:39.804Z"
+    },
+    {
+      "id": 28,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:39.737Z"
+    },
+    {
+      "id": 27,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:39.671Z"
+    },
+    {
+      "id": 26,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:39.366Z"
+    },
+    {
+      "id": 25,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:39.287Z"
+    },
+    {
+      "id": 24,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:38.153Z"
+    },
+    {
+      "id": 23,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:38.077Z"
+    },
+    {
+      "id": 22,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 10,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:37.806Z"
+    },
+    {
+      "id": 21,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 10
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:37.608Z"
+    },
+    {
+      "id": 20,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 10,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:37.525Z"
+    },
+    {
+      "id": 19,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 10
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:37.211Z"
+    },
+    {
+      "id": 18,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 10,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:37.136Z"
+    },
+    {
+      "id": 17,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 10
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:35.762Z"
+    },
+    {
+      "id": 16,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 10,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:35.032Z"
+    },
+    {
+      "id": 15,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 10
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:34.447Z"
+    },
+    {
+      "id": 14,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 10,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:34.186Z"
+    },
+    {
+      "id": 13,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 9,
+        "new_threshold": 10
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:33.958Z"
+    },
+    {
+      "id": 12,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 9
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:33.802Z"
+    },
+    {
+      "id": 11,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "2",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:52:33.703Z"
+    },
+    {
+      "id": 10,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "2",
+      "payload": {
+        "login": "manager",
+        "role": "manager"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T09:25:21.116Z"
+    },
+    {
+      "id": 9,
+      "actor_id": 3,
+      "actor_name": "client_booking",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "3",
+      "payload": {
+        "login": "client_booking",
+        "role": "client"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:53:12.220Z"
+    },
+    {
+      "id": 8,
+      "actor_id": 1,
+      "actor_name": "admin",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "1",
+      "payload": {
+        "login": "admin",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:53:11.463Z"
+    },
+    {
+      "id": 7,
+      "actor_id": 2,
+      "actor_name": "manager",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "2",
+      "payload": {
+        "login": "manager",
+        "role": "manager"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:53:10.406Z"
+    },
+    {
+      "id": 6,
+      "actor_id": 3,
+      "actor_name": "client_booking",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "3",
+      "payload": {
+        "login": "client_booking",
+        "role": "client"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:53:08.996Z"
+    },
+    {
+      "id": 5,
+      "actor_id": 3,
+      "actor_name": "client_booking",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "3",
+      "payload": {
+        "login": "client_booking",
+        "role": "client"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:53:08.041Z"
+    },
+    {
+      "id": 4,
+      "actor_id": 9,
+      "actor_name": "цы",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "9",
+      "payload": {
+        "login": "цы",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:52:30.043Z"
+    },
+    {
+      "id": 3,
+      "actor_id": 9,
+      "actor_name": "цы",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "9",
+      "payload": {
+        "login": "цы",
+        "role": "admin",
+        "full_name": "Администратор (цы)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T21:52:30.033Z"
+    },
+    {
+      "id": 2,
+      "actor_id": 8,
+      "actor_name": "ироаипрву",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "8",
+      "payload": {
+        "login": "ироаипрву",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T20:49:38.123Z"
+    },
+    {
+      "id": 1,
+      "actor_id": 8,
+      "actor_name": "ироаипрву",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "8",
+      "payload": {
+        "login": "ироаипрву",
+        "role": "admin",
+        "full_name": "Администратор (ироаипрву)"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-21T20:49:38.102Z"
+    },
     {
       "id": 4,
       "actor_id": 7,
