@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, cn } from '../ui';
 import { Sparkline } from './Sparkline';
 import { KpiTileData, KpiResponse } from '../../types';
-import { ArrowUpRight, ArrowDownRight, Minus, Info } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, Minus } from 'lucide-react';
 
 interface KpiTileProps {
   data: KpiTileData;
