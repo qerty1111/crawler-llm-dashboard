@@ -265,17 +265,17 @@ export const LinksPage: React.FC = () => {
       {/* Main Links Table (Sticky Header & Keyset Scroll) */}
       <Card className="p-0 overflow-hidden border-surface-border">
         <div className="overflow-x-auto max-h-[700px] overflow-y-auto">
-          <table className="w-full text-left text-xs min-w-[1000px]">
+          <table className="w-full text-left text-xs min-w-[1150px] table-auto">
             <thead className="bg-surface-light sticky top-0 z-20 border-b border-surface-border text-slate-400 select-none shadow-sm">
               <tr>
                 <th className="py-3 px-3 font-semibold w-8"></th>
-                <th className="py-3 px-4 font-semibold w-28 whitespace-nowrap">Оценка</th>
-                <th className="py-3 px-4 font-semibold w-48 whitespace-nowrap">Домен</th>
-                <th className="py-3 px-4 font-semibold min-w-[280px]">Заголовок страницы и URL</th>
-                <th className="py-3 px-4 font-semibold w-44 whitespace-nowrap">Категория</th>
-                <th className="py-3 px-4 font-semibold w-48 whitespace-nowrap">Запрос-источник</th>
-                <th className="py-3 px-4 font-semibold text-right w-40 whitespace-nowrap">Время оценки</th>
-                <th className="py-3 px-4 font-semibold text-right w-16 whitespace-nowrap">Действие</th>
+                <th className="py-3 px-4 font-semibold w-28 min-w-[95px] whitespace-nowrap">Оценка</th>
+                <th className="py-3 px-4 font-semibold w-48 min-w-[180px] whitespace-nowrap">Домен</th>
+                <th className="py-3 px-4 font-semibold min-w-[320px]">Заголовок страницы и URL</th>
+                <th className="py-3 px-4 font-semibold w-44 min-w-[155px] whitespace-nowrap">Категория</th>
+                <th className="py-3 px-4 font-semibold w-52 min-w-[190px] whitespace-nowrap">Запрос-источник</th>
+                <th className="py-3 px-4 font-semibold text-right w-44 min-w-[150px] whitespace-nowrap">Время оценки</th>
+                <th className="py-3 px-4 font-semibold text-right w-16 min-w-[60px] whitespace-nowrap">Действие</th>
               </tr>
             </thead>
 
@@ -318,8 +318,8 @@ export const LinksPage: React.FC = () => {
 
                         {/* Score Badge */}
                         <td className="py-3 px-4 whitespace-nowrap">
-                          <span className={cn('px-2.5 py-1 rounded-md border text-xs font-mono font-bold whitespace-nowrap inline-flex items-center justify-center min-w-[62px]', getScoreBadgeClass(link.score))}>
-                            {link.score} / 10
+                          <span className={cn('px-2.5 py-1 rounded-md border text-xs font-mono font-bold whitespace-nowrap inline-flex items-center justify-center flex-shrink-0 min-w-[66px]', getScoreBadgeClass(link.score))}>
+                            {link.score}&nbsp;/&nbsp;10
                           </span>
                         </td>
 
@@ -327,7 +327,7 @@ export const LinksPage: React.FC = () => {
                         <td className="py-3 px-4 whitespace-nowrap">
                           <div className="font-mono font-bold text-slate-100 flex items-center gap-1.5 whitespace-nowrap">
                             <span>{link.domain}</span>
-                            <span className="text-[10px] text-slate-400 font-sans uppercase bg-surface-lighter px-1.5 py-0.5 rounded whitespace-nowrap">
+                            <span className="text-[10px] text-slate-400 font-sans uppercase bg-surface-lighter px-1.5 py-0.5 rounded whitespace-nowrap flex-shrink-0">
                               {link.region}
                             </span>
                           </div>
@@ -335,7 +335,7 @@ export const LinksPage: React.FC = () => {
 
                         {/* Title & URL */}
                         <td className="py-3 px-4 max-w-md">
-                          <p className="font-sans font-semibold text-slate-200 truncate" title={link.title}>
+                          <p className="font-sans font-semibold text-slate-200 truncate max-w-md" title={link.title}>
                             {link.title}
                           </p>
                           <a
@@ -343,7 +343,7 @@ export const LinksPage: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="font-mono text-[11px] text-brand-400 hover:text-brand-300 truncate block mt-0.5 hover:underline"
+                            className="font-mono text-[11px] text-brand-400 hover:text-brand-300 truncate max-w-md block mt-0.5 hover:underline"
                             title={link.url}
                           >
                             {link.url}
@@ -352,13 +352,13 @@ export const LinksPage: React.FC = () => {
 
                         {/* Category */}
                         <td className="py-3 px-4 font-sans whitespace-nowrap">
-                          <span className={cn('px-2.5 py-1 rounded-md border text-[11px] font-semibold whitespace-nowrap inline-flex items-center', getCategoryBadgeClass(link.category))}>
-                            {link.category}
+                          <span className={cn('px-2.5 py-1 rounded-md border text-[11px] font-semibold whitespace-nowrap inline-flex items-center flex-shrink-0', getCategoryBadgeClass(link.category))}>
+                            {link.category.replace(/ /g, '\u00A0')}
                           </span>
                         </td>
 
                         {/* Source Query */}
-                        <td className="py-3 px-4 font-sans text-slate-400 text-[11px] truncate max-w-[180px] whitespace-nowrap" title={link.query_orig}>
+                        <td className="py-3 px-4 font-sans text-slate-400 text-[11px] truncate max-w-[200px]" title={link.query_orig}>
                           {link.query_orig}
                         </td>
 
