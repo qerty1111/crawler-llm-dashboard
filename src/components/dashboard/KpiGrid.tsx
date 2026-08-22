@@ -35,24 +35,12 @@ export const KpiTile: React.FC<KpiTileProps> = ({ data, colorVariant = 'blue' })
   };
 
   return (
-    <Card className="relative overflow-visible p-4 flex flex-col justify-between hover:border-slate-700 transition-all group z-10 hover:z-30">
-      {/* Top row: Title and Tooltip */}
+    <Card className="relative overflow-hidden p-4 flex flex-col justify-between hover:border-slate-700 transition-all group">
+      {/* Top row: Title */}
       <div className="flex items-start justify-between gap-2 mb-2">
         <span className="text-xs font-semibold text-slate-400 leading-tight group-hover:text-slate-200 transition-colors">
           {data.title}
         </span>
-        <div
-          className="relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <Info className="w-3.5 h-3.5 text-slate-500 hover:text-slate-200 cursor-help transition-colors" />
-          {isHovered && (
-            <div className="absolute right-0 top-full mt-1.5 w-56 p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-[11px] leading-relaxed text-slate-200 shadow-2xl z-50 pointer-events-none">
-              {data.tooltip}
-            </div>
-          )}
-        </div>
       </div>
 
       {/* Middle: Big Value */}
