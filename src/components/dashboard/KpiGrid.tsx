@@ -34,15 +34,15 @@ export const KpiTile: React.FC<KpiTileProps> = ({ data, colorVariant = 'blue' })
   };
 
   return (
-    <Card className="relative overflow-hidden p-4 flex flex-col justify-between hover:border-slate-700 transition-all group">
+    <Card className="relative overflow-visible p-4 flex flex-col justify-between hover:border-slate-700 transition-all group z-10 hover:z-30">
       {/* Top row: Title and Tooltip */}
       <div className="flex items-start justify-between gap-2 mb-2">
         <span className="text-xs font-semibold text-slate-400 leading-tight group-hover:text-slate-200 transition-colors">
           {data.title}
         </span>
         <div className="relative group/tooltip">
-          <Info className="w-3.5 h-3.5 text-slate-500 hover:text-slate-300 cursor-help" />
-          <div className="absolute right-0 bottom-full mb-1.5 hidden group-hover/tooltip:block w-48 p-2 bg-slate-900 border border-slate-700 rounded-lg text-[11px] text-slate-300 shadow-xl z-50 pointer-events-none">
+          <Info className="w-3.5 h-3.5 text-slate-500 hover:text-slate-200 cursor-help transition-colors" />
+          <div className="absolute right-0 top-full mt-1.5 hidden group-hover/tooltip:block w-56 p-2.5 bg-slate-900/95 backdrop-blur-md border border-slate-700/90 rounded-xl text-[11px] leading-relaxed text-slate-200 shadow-2xl z-50 pointer-events-none">
             {data.tooltip}
           </div>
         </div>
