@@ -233,21 +233,23 @@ export const QueryDetailPage: React.FC = () => {
             <tbody className="divide-y divide-surface-border/40 font-mono">
               {recentLinks.map((link: FactClassified) => (
                 <tr key={link.id} className="hover:bg-surface-light/50 transition-colors">
-                  <td className="py-2.5">
-                    <span className={cn('px-2 py-0.5 rounded-md border text-[11px] font-mono', getScoreBadgeClass(link.score))}>
+                  <td className="py-2.5 whitespace-nowrap">
+                    <span className={cn('px-2 py-0.5 rounded-md border text-[11px] font-mono whitespace-nowrap inline-flex items-center justify-center min-w-[58px]', getScoreBadgeClass(link.score))}>
                       {link.score} / 10
                     </span>
                   </td>
-                  <td className="py-2.5 text-slate-200 font-bold">{link.domain}</td>
+                  <td className="py-2.5 text-slate-200 font-bold whitespace-nowrap">{link.domain}</td>
                   <td className="py-2.5 font-sans text-slate-300 truncate max-w-sm" title={link.title}>
                     {link.title}
                   </td>
-                  <td className="py-2.5 font-sans">
-                    <Badge variant="default" size="sm" className="text-[10px]">{link.category}</Badge>
+                  <td className="py-2.5 font-sans whitespace-nowrap">
+                    <span className={cn('px-2 py-0.5 rounded-md border text-[11px] font-semibold whitespace-nowrap inline-flex items-center', getCategoryBadgeClass(link.category))}>
+                      {link.category}
+                    </span>
                   </td>
-                  <td className="py-2.5 uppercase text-slate-400">{link.region}</td>
-                  <td className="py-2.5 text-right text-slate-400">{formatKyivDateTime(link.classified_at)}</td>
-                  <td className="py-2.5 text-right">
+                  <td className="py-2.5 uppercase text-slate-400 whitespace-nowrap">{link.region}</td>
+                  <td className="py-2.5 text-right text-slate-400 whitespace-nowrap">{formatKyivDateTime(link.classified_at)}</td>
+                  <td className="py-2.5 text-right whitespace-nowrap">
                     <a
                       href={link.url}
                       target="_blank"

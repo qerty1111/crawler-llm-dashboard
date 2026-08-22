@@ -96,7 +96,7 @@ export const LiveFeed: React.FC = () => {
                 </span>
                 <span
                   className={cn(
-                    'px-2 py-0.5 rounded-md border text-[11px] font-mono',
+                    'px-2 py-0.5 rounded-md border text-[11px] font-mono whitespace-nowrap inline-flex items-center justify-center min-w-[58px]',
                     getScoreBadgeClass(item.score)
                   )}
                 >
@@ -104,7 +104,7 @@ export const LiveFeed: React.FC = () => {
                 </span>
                 <span
                   className={cn(
-                    'px-1.5 py-0.5 rounded text-[10px] font-medium border hidden sm:inline-block',
+                    'px-1.5 py-0.5 rounded text-[10px] font-medium border hidden sm:inline-flex items-center whitespace-nowrap',
                     getCategoryBadgeClass(item.category)
                   )}
                 >

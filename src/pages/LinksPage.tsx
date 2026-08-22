@@ -222,7 +222,7 @@ export const LinksPage: React.FC = () => {
 
           {/* Score Range Pickers */}
           <div className="flex items-center gap-2 bg-surface-light border border-surface-border rounded-xl px-3 py-1">
-            <span className="text-[11px] text-slate-400">Балл:</span>
+            <span className="text-[11px] text-slate-400 whitespace-nowrap">Балл:</span>
             <input
               type="number"
               min="0"
@@ -245,7 +245,7 @@ export const LinksPage: React.FC = () => {
 
         {/* Reset Filter Button */}
         <div className="flex items-center justify-between pt-2 border-t border-surface-border/50 text-xs">
-          <div className="flex items-center gap-2 text-slate-400">
+          <div className="flex items-center gap-2 text-slate-400 flex-wrap">
             <span>Активные фильтры:</span>
             {minScore > 0 && <Badge variant="success" size="sm">score ≥ {minScore}</Badge>}
             {categoryFilter && <Badge variant="purple" size="sm">{categoryFilter}</Badge>}
@@ -254,7 +254,7 @@ export const LinksPage: React.FC = () => {
 
           <button
             onClick={resetFilters}
-            className="text-[11px] text-slate-400 hover:text-rose-400 transition-colors flex items-center gap-1"
+            className="text-[11px] text-slate-400 hover:text-rose-400 transition-colors flex items-center gap-1 whitespace-nowrap ml-auto"
           >
             <X className="w-3 h-3" />
             Сбросить все фильтры
@@ -265,17 +265,17 @@ export const LinksPage: React.FC = () => {
       {/* Main Links Table (Sticky Header & Keyset Scroll) */}
       <Card className="p-0 overflow-hidden border-surface-border">
         <div className="overflow-x-auto max-h-[700px] overflow-y-auto">
-          <table className="w-full text-left text-xs">
+          <table className="w-full text-left text-xs min-w-[1000px]">
             <thead className="bg-surface-light sticky top-0 z-20 border-b border-surface-border text-slate-400 select-none shadow-sm">
               <tr>
-                <th className="py-3 px-4 font-semibold w-8"></th>
-                <th className="py-3 px-4 font-semibold w-24">Оценка</th>
-                <th className="py-3 px-4 font-semibold w-48">Домен</th>
-                <th className="py-3 px-4 font-semibold">Заголовок страницы и URL</th>
-                <th className="py-3 px-4 font-semibold w-36">Категория</th>
-                <th className="py-3 px-4 font-semibold w-48">Запрос-источник</th>
-                <th className="py-3 px-4 font-semibold text-right w-36">Время оценки</th>
-                <th className="py-3 px-4 font-semibold text-right w-16">Действие</th>
+                <th className="py-3 px-3 font-semibold w-8"></th>
+                <th className="py-3 px-4 font-semibold w-28 whitespace-nowrap">Оценка</th>
+                <th className="py-3 px-4 font-semibold w-48 whitespace-nowrap">Домен</th>
+                <th className="py-3 px-4 font-semibold min-w-[280px]">Заголовок страницы и URL</th>
+                <th className="py-3 px-4 font-semibold w-44 whitespace-nowrap">Категория</th>
+                <th className="py-3 px-4 font-semibold w-48 whitespace-nowrap">Запрос-источник</th>
+                <th className="py-3 px-4 font-semibold text-right w-40 whitespace-nowrap">Время оценки</th>
+                <th className="py-3 px-4 font-semibold text-right w-16 whitespace-nowrap">Действие</th>
               </tr>
             </thead>
 
@@ -317,17 +317,17 @@ export const LinksPage: React.FC = () => {
                         </td>
 
                         {/* Score Badge */}
-                        <td className="py-3 px-4">
-                          <span className={cn('px-2.5 py-1 rounded-md border text-xs font-mono font-bold', getScoreBadgeClass(link.score))}>
+                        <td className="py-3 px-4 whitespace-nowrap">
+                          <span className={cn('px-2.5 py-1 rounded-md border text-xs font-mono font-bold whitespace-nowrap inline-flex items-center justify-center min-w-[62px]', getScoreBadgeClass(link.score))}>
                             {link.score} / 10
                           </span>
                         </td>
 
                         {/* Domain & Region */}
-                        <td className="py-3 px-4">
-                          <div className="font-mono font-bold text-slate-100 flex items-center gap-1.5">
+                        <td className="py-3 px-4 whitespace-nowrap">
+                          <div className="font-mono font-bold text-slate-100 flex items-center gap-1.5 whitespace-nowrap">
                             <span>{link.domain}</span>
-                            <span className="text-[10px] text-slate-400 font-sans uppercase bg-surface-lighter px-1.5 py-0.5 rounded">
+                            <span className="text-[10px] text-slate-400 font-sans uppercase bg-surface-lighter px-1.5 py-0.5 rounded whitespace-nowrap">
                               {link.region}
                             </span>
                           </div>
@@ -351,24 +351,24 @@ export const LinksPage: React.FC = () => {
                         </td>
 
                         {/* Category */}
-                        <td className="py-3 px-4 font-sans">
-                          <span className={cn('px-2 py-0.5 rounded-md border text-[11px] font-semibold', getCategoryBadgeClass(link.category))}>
+                        <td className="py-3 px-4 font-sans whitespace-nowrap">
+                          <span className={cn('px-2.5 py-1 rounded-md border text-[11px] font-semibold whitespace-nowrap inline-flex items-center', getCategoryBadgeClass(link.category))}>
                             {link.category}
                           </span>
                         </td>
 
                         {/* Source Query */}
-                        <td className="py-3 px-4 font-sans text-slate-400 text-[11px] truncate max-w-[180px]" title={link.query_orig}>
+                        <td className="py-3 px-4 font-sans text-slate-400 text-[11px] truncate max-w-[180px] whitespace-nowrap" title={link.query_orig}>
                           {link.query_orig}
                         </td>
 
                         {/* Time */}
-                        <td className="py-3 px-4 text-right text-slate-400 text-[11px]">
+                        <td className="py-3 px-4 text-right text-slate-400 text-[11px] whitespace-nowrap font-mono">
                           {formatKyivDateTime(link.classified_at)}
                         </td>
 
                         {/* Action Link */}
-                        <td className="py-3 px-4 text-right">
+                        <td className="py-3 px-4 text-right whitespace-nowrap">
                           <a
                             href={link.url}
                             target="_blank"
