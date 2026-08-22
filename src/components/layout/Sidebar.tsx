@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard,
   FolderKanban,
@@ -11,16 +11,14 @@ import {
   ShieldAlert,
   LogOut,
   Sparkles,
-  Zap,
-  Bot
+  Zap
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { Badge, cn } from '../ui';
-import { formatNumber, formatPercent } from '../../utils/formatters';
+import { formatNumber } from '../../utils/formatters';
 
 export const Sidebar: React.FC = () => {
-  const { user, role, budget, logout, login } = useAuth();
-  const navigate = useNavigate();
+  const { user, role, budget, logout } = useAuth();
 
   const navItems = [
     { to: '/', label: 'Главная', icon: LayoutDashboard },
@@ -36,16 +34,6 @@ export const Sidebar: React.FC = () => {
         ]
       : []),
   ];
-
-  // Demo user quick switcher
-  const handleQuickSwitch = async (loginName: string) => {
-    try {
-      await login({ login: loginName, password: loginName === 'admin' ? 'admin123' : loginName === 'manager' ? 'manager123' : 'client123' });
-      navigate('/');
-    } catch (e) {
-      console.error(e);
-    }
-  };
 
   const rawPct = budget && budget.raw_limit > 0 ? (budget.raw_used / budget.raw_limit) * 100 : 0;
   const llmPct = budget && budget.llm_limit > 0 ? (budget.llm_used / budget.llm_limit) * 100 : 0;
@@ -91,43 +79,6 @@ export const Sidebar: React.FC = () => {
             </NavLink>
           );
         })}
-
-        {/* Quick Demo Switcher */}
-        <div className="pt-4 mt-4 border-t border-surface-border/50">
-          <div className="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-            <span>Демо-переключение</span>
-            <Zap className="w-3 h-3 text-amber-400" />
-          </div>
-          <div className="grid grid-cols-2 gap-1.5 px-2 mt-1.5">
-            <button
-              onClick={() => handleQuickSwitch('admin')}
-              className={cn(
-                'text-xs py-1 px-2 rounded-lg font-mono text-left transition-colors',
-                user?.login === 'admin' ? 'bg-rose-500/20 text-rose-300 font-bold border border-rose-500/40' : 'bg-surface-light text-slate-400 hover:text-white'
-              )}
-            >
-              Admin
-            </button>
-            <button
-              onClick={() => handleQuickSwitch('manager')}
-              className={cn(
-                'text-xs py-1 px-2 rounded-lg font-mono text-left transition-colors',
-                user?.login === 'manager' ? 'bg-purple-500/20 text-purple-300 font-bold border border-purple-500/40' : 'bg-surface-light text-slate-400 hover:text-white'
-              )}
-            >
-              Manager
-            </button>
-            <button
-              onClick={() => handleQuickSwitch('client_booking')}
-              className={cn(
-                'text-xs py-1 px-2 rounded-lg font-mono text-left transition-colors col-span-2',
-                user?.login === 'client_booking' ? 'bg-brand-500/20 text-brand-300 font-bold border border-brand-500/40' : 'bg-surface-light text-slate-400 hover:text-white'
-              )}
-            >
-              Client: ОтельСофт
-            </button>
-          </div>
-        </div>
       </nav>
 
       {/* Budget Card (for Client & Manager) */}
