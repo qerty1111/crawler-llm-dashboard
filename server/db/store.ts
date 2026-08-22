@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 import {
   User, Session, Project, QueryRecord, UserSettings, Budget, BudgetLedger,
   PromptProfile, PromptHistory, FactClassified, AggMinute, AggDay,
-  HostMetrics, ServiceHealth, OllamaInstance, AuditLog, PromptBlocks
+  HostMetrics, ServiceHealth, OllamaInstance, AuditLog, PromptBlocks, GpuMetric
 } from '../types.js';
 
 const __filename = fileURLToPath(import.meta.url);
