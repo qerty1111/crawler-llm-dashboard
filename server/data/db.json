@@ -122,6 +122,16 @@
       "is_active": true,
       "created_at": "2026-08-22T11:40:39.741Z",
       "last_login_at": "2026-08-22T11:49:58.821Z"
+    },
+    {
+      "id": 13,
+      "login": "]",
+      "password_hash": "$2b$10$b2lsoIiLGMxv9aWykAU8.OGciBtO58Nsd6a/naKTtf60uKaBz1g5i",
+      "full_name": "Администратор (])",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-08-22T12:44:43.948Z",
+      "last_login_at": "2026-08-22T12:44:43.961Z"
     }
   ],
   "projects": [
@@ -212,6 +222,14 @@
       "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
       "is_archived": false,
       "created_at": "2026-08-22T11:40:39.741Z"
+    },
+    {
+      "id": 1,
+      "owner_user_id": 13,
+      "name": "Общий проект мониторинга",
+      "description": "Автоматически созданный рабочий проект для поиска и скоринга ссылок.",
+      "is_archived": false,
+      "created_at": "2026-08-22T12:44:43.949Z"
     }
   ],
   "queries": [
@@ -642,6 +660,35 @@
       "created_at": "2026-08-22T11:40:39.742Z",
       "first_seen_at": "2026-08-22T11:40:39.742Z",
       "last_seen_at": "2026-08-22T11:40:39.742Z"
+    },
+    {
+      "id": 1,
+      "project_id": 1,
+      "owner_user_id": 13,
+      "text_orig": "best hospitality hotel management software cloud",
+      "regions": [
+        "wt-wt"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T12:44:43.949Z",
+      "first_seen_at": "2026-08-22T12:44:43.949Z",
+      "last_seen_at": "2026-08-22T12:44:43.949Z"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "owner_user_id": 13,
+      "text_orig": "hotel channel manager direct booking engine sync",
+      "regions": [
+        "us",
+        "gb",
+        "de",
+        "es"
+      ],
+      "status": "active",
+      "created_at": "2026-08-22T12:44:43.949Z",
+      "first_seen_at": "2026-08-22T12:44:43.949Z",
+      "last_seen_at": "2026-08-22T12:44:43.949Z"
     }
   ],
   "userSettings": [
@@ -740,6 +787,14 @@
         "score_threshold": 7,
         "updated_at": "2026-08-22T11:40:39.741Z"
       }
+    ],
+    [
+      13,
+      {
+        "user_id": 13,
+        "score_threshold": 7,
+        "updated_at": "2026-08-22T12:47:03.955Z"
+      }
     ]
   ],
   "budgets": [
@@ -749,9 +804,9 @@
         "user_id": 3,
         "raw_limit": 200000,
         "llm_limit": 150000,
-        "raw_used": 134371,
-        "llm_used": 97271,
-        "updated_at": "2026-08-22T11:49:58.120Z"
+        "raw_used": 135849,
+        "llm_used": 98749,
+        "updated_at": "2026-08-22T12:47:02.584Z"
       }
     ],
     [
@@ -852,6 +907,17 @@
         "llm_used": 0,
         "updated_at": "2026-08-22T11:40:39.741Z"
       }
+    ],
+    [
+      13,
+      {
+        "user_id": 13,
+        "raw_limit": 1000000,
+        "llm_limit": 800000,
+        "raw_used": 0,
+        "llm_used": 0,
+        "updated_at": "2026-08-22T12:44:43.949Z"
+      }
     ]
   ],
   "budgetLedger": [
@@ -946,6 +1012,15 @@
       "reason": "topup",
       "actor_name": "система регистрации",
       "created_at": "2026-08-22T11:40:39.741Z"
+    },
+    {
+      "id": 1,
+      "user_id": 13,
+      "delta_raw": 1000000,
+      "delta_llm": 800000,
+      "reason": "topup",
+      "actor_name": "система регистрации",
+      "created_at": "2026-08-22T12:44:43.949Z"
     }
   ],
   "promptProfiles": [
@@ -1036,6 +1111,119 @@
   ],
   "promptHistory": [],
   "auditLogs": [
+    {
+      "id": 9,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "13",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:47:03.955Z"
+    },
+    {
+      "id": 8,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "13",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:47:03.601Z"
+    },
+    {
+      "id": 7,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "13",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:47:03.135Z"
+    },
+    {
+      "id": 6,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "13",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:47:02.580Z"
+    },
+    {
+      "id": 5,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "13",
+      "payload": {
+        "old_threshold": 8,
+        "new_threshold": 7
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:47:01.487Z"
+    },
+    {
+      "id": 4,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "change_threshold",
+      "entity": "user_settings",
+      "entity_id": "13",
+      "payload": {
+        "old_threshold": 7,
+        "new_threshold": 8
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:47:00.869Z"
+    },
+    {
+      "id": 3,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "login",
+      "entity": "user",
+      "entity_id": "13",
+      "payload": {
+        "login": "]",
+        "role": "admin"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:44:43.964Z"
+    },
+    {
+      "id": 2,
+      "actor_id": 13,
+      "actor_name": "]",
+      "action": "register_user",
+      "entity": "user",
+      "entity_id": "13",
+      "payload": {
+        "login": "]",
+        "role": "admin",
+        "full_name": "Администратор (])"
+      },
+      "ip": "127.0.0.1",
+      "created_at": "2026-08-22T12:44:43.949Z"
+    },
     {
       "id": 1,
       "actor_id": 12,

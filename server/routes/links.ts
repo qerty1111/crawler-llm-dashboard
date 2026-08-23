@@ -1,6 +1,7 @@
 import { Router, Response } from 'express';
 import { db } from '../db/store.js';
 import { AuthenticatedRequest, authMiddleware } from '../middleware/auth.js';
+import { globalWsHub } from '../websocket/hub.js';
 
 export const linksRouter = Router();
 
@@ -118,5 +119,60 @@ linksRouter.get('/', authMiddleware, (req: AuthenticatedRequest, res: Response) 
       region: regionFilter,
       search: searchFilter,
     },
+  });
+});
+
+// POST /api/links/ingest - Endpoint for real Python crawler & LLM scorer
+linksRouter.post('/ingest', (req: any, res: Response) => {
+  const item = req.body;
+  if (!item || !item.url) {
+    return res.status(400).json({ error: 'Missing required url parameter' });
+  }
+
+  let domain = item.domain;
+  if (!domain) {
+    try {
+      domain = new URL(item.url).hostname.replace(/^www\./, '');
+    } catch {
+      domain = item.url.split('/')[2] || item.url;
+    }
+  }
+
+  const score = Math.max(0, Math.min(10, Number(item.score) || 7));
+  const newFact = {
+    id: db.factClassified.length + 1,
+    project_id: Number(item.project_id) || 1,
+    query_id: Number(item.query_id) || 1,
+    owner_user_id: Number(item.owner_user_id) || 1,
+    domain,
+    url: item.url,
+    title: item.title || domain,
+    snippet: item.snippet || '',
+    page_tags: item.page_tags || item.reasoning || item.category || 'Hotel Management',
+    category: item.category || 'PMS',
+    region: item.region || 'wt-wt',
+    query_orig: item.query_orig || item.query || 'hotel property management system pms',
+    raw_site_id: Number(item.raw_site_id) || Math.floor(Math.random() * 100000),
+    found_at: item.found_at || new Date().toISOString(),
+    classified_at: item.classified_at || new Date().toISOString(),
+    score,
+  };
+
+  // Add to in-memory store
+  db.factClassified.unshift(newFact);
+  db.saveToDisk();
+
+  // Broadcast via WebSocket
+  if (globalWsHub) {
+    globalWsHub.broadcastRealFact(newFact);
+  }
+
+  return res.status(201).json({
+    status: 'ok',
+    message: 'Link ingested and broadcasted successfully',
+    id: newFact.id,
+    domain: newFact.domain,
+    score: newFact.score,
+    category: newFact.category,
   });
 });

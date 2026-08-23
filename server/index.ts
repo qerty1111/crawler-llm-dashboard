@@ -12,7 +12,7 @@ import { promptRouter } from './routes/prompt.js';
 import { systemRouter } from './routes/system.js';
 import { adminRouter } from './routes/admin.js';
 import { exportRouter } from './routes/export.js';
-import { WebSocketHub } from './websocket/hub.js';
+import { WebSocketHub, setGlobalWsHub } from './websocket/hub.js';
 
 const app = express();
 const server = http.createServer(app);
@@ -77,6 +77,7 @@ if (fs.existsSync(distPath)) {
 
 // Initialize WebSocket Hub
 const wsHub = new WebSocketHub(server);
+setGlobalWsHub(wsHub);
 
 // Start HTTP Server
 server.listen(PORT, '0.0.0.0', () => {

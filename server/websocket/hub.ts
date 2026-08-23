@@ -163,9 +163,37 @@ export class WebSocketHub {
     }, 30000);
   }
 
+  public broadcastRealFact(newFact: any, kpiTick?: any) {
+    for (const client of this.clients) {
+      if (client.ws.readyState !== WebSocket.OPEN) continue;
+      const isClientOwner = !client.userId || client.userRole === 'admin' || client.userRole === 'manager' || (newFact.owner_user_id === client.userId);
+
+      if (client.subscriptions.has('feed') && isClientOwner && newFact.score >= client.threshold) {
+        client.ws.send(JSON.stringify({
+          type: 'feed_item',
+          data: newFact,
+          timestamp: new Date().toISOString(),
+        }));
+      }
+
+      if (client.subscriptions.has('kpi') && kpiTick) {
+        client.ws.send(JSON.stringify({
+          type: 'kpi_tick',
+          data: kpiTick,
+          timestamp: new Date().toISOString(),
+        }));
+      }
+    }
+  }
+
   public cleanup() {
     if (this.tickInterval) clearInterval(this.tickInterval);
     if (this.healthInterval) clearInterval(this.healthInterval);
     if (this.heartbeatInterval) clearInterval(this.heartbeatInterval);
   }
+}
+
+export let globalWsHub: WebSocketHub | null = null;
+export function setGlobalWsHub(hub: WebSocketHub) {
+  globalWsHub = hub;
 }
