@@ -178,9 +178,11 @@ authRouter.post('/login', (req, res) => {
   user.last_login_at = new Date().toISOString();
   db.saveToDisk();
 
-  // Create session token
+  // Create session token (30 days for persistent session)
+  const isRemember = req.body.remember_me !== false;
+  const sessionDuration = isRemember ? (30 * 24 * 3600 * 1000) : (12 * 3600 * 1000);
   const token = crypto.randomBytes(32).toString('hex');
-  const expiresAt = new Date(Date.now() + 12 * 3600 * 1000).toISOString();
+  const expiresAt = new Date(Date.now() + sessionDuration).toISOString();
 
   db.sessions.push({
     token,
@@ -191,15 +193,16 @@ authRouter.post('/login', (req, res) => {
     user_agent: req.headers['user-agent'],
   });
 
-  // Log audit
+  // Log audit & persist session to disk
   db.addAuditLog(user.id, user.login, 'login', 'user', String(user.id), { login: user.login, role: user.role }, ip);
+  db.saveToDisk();
 
   // Set HTTP-only cookie
   res.cookie('token', token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: false, // allow local tunneling HTTP
     sameSite: 'lax',
-    maxAge: 12 * 3600 * 1000,
+    maxAge: sessionDuration,
   });
 
   const settings = db.userSettings.get(user.id);

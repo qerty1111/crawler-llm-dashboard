@@ -48,7 +48,7 @@ export const LoginPage: React.FC = () => {
     setError(null);
 
     try {
-      await authLogin({ login: loginInput.trim(), password: passwordInput });
+      await authLogin({ login: loginInput.trim(), password: passwordInput, remember_me: rememberMe });
       navigate('/');
     } catch (err: any) {
       setError(err.message || 'Неверный логин или пароль');

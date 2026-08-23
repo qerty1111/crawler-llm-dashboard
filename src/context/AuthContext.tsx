@@ -9,7 +9,7 @@ interface AuthContextType {
   scoreThreshold: number;
   budget: Budget | null;
   isLoading: boolean;
-  login: (credentials: { login: string; password: string }) => Promise<void>;
+  login: (credentials: { login: string; password: string; remember_me?: boolean }) => Promise<void>;
   register: (data: { login: string; password: string; full_name: string; role?: 'client' | 'manager' | 'admin'; score_threshold?: number; raw_limit?: number; llm_limit?: number }) => Promise<void>;
   logout: () => Promise<void>;
   setScoreThreshold: (threshold: number) => Promise<void>;
@@ -48,7 +48,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [token]);
 
-  const login = async (credentials: { login: string; password: string }) => {
+  const login = async (credentials: { login: string; password: string; remember_me?: boolean }) => {
     const data = await api.login(credentials);
     localStorage.setItem('auth_token', data.token);
     setToken(data.token);

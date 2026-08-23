@@ -94,8 +94,10 @@ export class DatabaseStore {
 
   public saveToDisk() {
     try {
+      const activeSessions = this.sessions.filter(s => new Date(s.expires_at) > new Date());
       const data = {
         users: this.users,
+        sessions: activeSessions,
         projects: this.projects,
         queries: this.queries,
         userSettings: Array.from(this.userSettings.entries()),
@@ -118,6 +120,7 @@ export class DatabaseStore {
         const data = JSON.parse(raw);
 
         this.users = data.users || [];
+        this.sessions = (data.sessions || []).filter((s: Session) => new Date(s.expires_at) > new Date());
         this.projects = data.projects || [];
         this.queries = data.queries || [];
         this.userSettings = new Map(data.userSettings || []);
